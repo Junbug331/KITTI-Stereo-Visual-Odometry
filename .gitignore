@@ -43,6 +43,8 @@
 build
 KITTI
 modules/thirdparty
+modules/thirdparty/pcl
+modules/thirdparty/pcl/CMakeLists.txt
 .vscode
 .idea
 devkit
