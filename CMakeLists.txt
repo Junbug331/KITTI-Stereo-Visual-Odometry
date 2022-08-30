@@ -23,14 +23,6 @@ target_link_libraries(${TARGET} PUBLIC
 	KITTI_VO
 )
 
-find_package(PkgConfig REQUIRED)
-if (PkgConfig_FOUND)
-	message(STATUS "PkgConfig Found! - ${PkgConfig_DIR}")
-	pkg_check_modules(JSONCPP jsoncpp)
-	target_link_libraries(${TARGET} ${JSONCPP_LIBARIES})
-endif()
-
-
 set (src "${CMAKE_SOURCE_DIR}/KITTI")
 set (dst "${CMAKE_CURRENT_BINARY_DIR}/KITTI")
 add_custom_command(
