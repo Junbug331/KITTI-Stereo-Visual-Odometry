@@ -50,3 +50,4 @@ modules/thirdparty/pcl/CMakeLists.txt
 devkit
 compile_commands.json
 poses_*
+pcl
