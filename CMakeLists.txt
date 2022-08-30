@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(stereo_depth)
+project(visual-odometry)
 set(TARGET ${PROJECT_NAME})
 
 set(CMAKE_CXX_STANDARD 17)
@@ -8,19 +8,19 @@ set(SRC_FILES
 	src/main.cpp
 )
 
-add_subdirectory(modules/utils)
+add_subdirectory(modules/KITTI_VO)
 
 add_definitions(-DROOT_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 add_executable(${TARGET} ${SRC_FILES})
 
 include_directories(
-	modules/utils/include
+	modules/KITTI_VO/include
 	)
 
 target_compile_options(${TARGET} PRIVATE -pthread)
 
 target_link_libraries(${TARGET} PUBLIC
-	utils
+	KITTI_VO
 )
 
 find_package(PkgConfig REQUIRED)

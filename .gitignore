@@ -49,3 +49,4 @@ modules/thirdparty/pcl/CMakeLists.txt
 .idea
 devkit
 compile_commands.json
+poses_*

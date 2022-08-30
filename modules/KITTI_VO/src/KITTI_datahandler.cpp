@@ -192,8 +192,8 @@ void KITTIDataHandler::loadGTPoses(const std::string &poses_path)
     while(getline(in, line))
     {
         std::istringstream iss(line);
-        gt.emplace_back(cv::Mat(3, 4, CV_32F));
+        gt.emplace_back(cv::Mat(3, 4, CV_64F));
         j = 0;
-        while (iss >> gt.back().at<float>(j/4, j%4)) j++;
+        while (iss >> gt.back().at<double>(j/4, j%4)) j++;
     }
 }
